@@ -1,0 +1,48 @@
+{% load static %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'prism.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/solid.min.css" integrity="sha512-uj2QCZdpo8PSbRGL/g5mXek6HM/APd7k/B5Hx/rkVFPNOxAQMXD+t+bG4Zv8OAdUpydZTU3UHmyjjiHv2Ww0PA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      div.code-toolbar>.toolbar>.toolbar-item>button, div.code-toolbar>.toolbar>.toolbar-item>span {
+        font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+        background-color: #E6DB74;
+        color:#000;
+        font-weight: 600;
+        font-size: 20px;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        display: block;
+        cursor: pointer;
+      }
+
+      div.code-toolbar>.toolbar {
+        opacity:1;
+      }
+
+      div.code-toolbar>.toolbar>.toolbar-item>button>span::before {
+        font-family: "Font Awesome 6 Free";
+        content: '\f0c5';
+        display: inline-block;
+        padding-right: 4px;
+        font-weight: 800;
+      }
+    </style>
+    <title>
+        {% block title %}
+                                      
+        {% endblock title %}
+    </title>
+</head>
+<body>
+  
+  {% block body %}
+   
+  {% endblock body %}
+  <script src="{% static 'prism.js' %}"></script>
+</body>
+</html>
